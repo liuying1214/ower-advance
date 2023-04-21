@@ -1,0 +1,22 @@
+
+name: dome
+
+on:
+  push:
+    branches:
+    - ["master"]
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest # For Linux, use ubuntu-latest
+    environment: dev
+    steps:
+    - name: 'Checkout GitHub Action'
+      uses: actions/checkout@v3
+
+    - name: Setup Node ${{ env.NODE_VERSION }} Environment
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+
+
