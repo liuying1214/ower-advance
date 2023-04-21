@@ -1,0 +1,20 @@
+
+name: main
+
+on:
+  push:
+    branches:
+    - liuying1214-patch-1
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest # For Linux, use ubuntu-latest
+    environment: dev
+    steps:
+    - name: 'Checkout GitHub Action'
+      uses: actions/checkout@v3
+
+    - name: Setup Node ${{ env.NODE_VERSION }} Environment
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ env.NODE_VERSION }}
