@@ -1,10 +1,10 @@
 
-name: dome
+name: main
 
 on:
   push:
     branches:
-    - ["master"]
+    - liuying1214-patch-1
 
 jobs:
   test1:
@@ -18,5 +18,3 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ env.NODE_VERSION }}
-
-
